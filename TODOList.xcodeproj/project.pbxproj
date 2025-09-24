@@ -39,11 +39,22 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		5DCBF1C12E84AC7F00815D58 /* Exceptions for "TODOList" folder in "Compile Sources" phase from "TODOList" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 5D97D5F62E841ABA002D9AEA /* Sources */;
+			membershipExceptions = (
+				Common/Shared.h,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5D97D5FC2E841ABA002D9AEA /* TODOList */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				5D97D62A2E841ABC002D9AEA /* Exceptions for "TODOList" folder in "TODOList" target */,
+				5DCBF1C12E84AC7F00815D58 /* Exceptions for "TODOList" folder in "Compile Sources" phase from "TODOList" target */,
 			);
 			path = TODOList;
 			sourceTree = "<group>";

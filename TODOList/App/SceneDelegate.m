@@ -6,15 +6,20 @@
 //
 
 #import "SceneDelegate.h"
-#import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface SceneDelegate ()
 @end
 
 @implementation SceneDelegate
 
-
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
+    self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
+    
+    UIViewController* rootViewController = ViewController.new;
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
+    [self.window makeKeyAndVisible];
 }
 
 - (void)sceneDidDisconnect:(UIScene *)scene {

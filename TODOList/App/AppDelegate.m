@@ -6,7 +6,6 @@
 //
 
 #import "AppDelegate.h"
-#import "SceneDelegate.h"
 
 @interface AppDelegate ()
 @end
