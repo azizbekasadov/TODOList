@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
+@class AppCoordinator;
 
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 

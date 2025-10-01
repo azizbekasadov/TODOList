@@ -6,20 +6,21 @@
 //
 
 #import "SceneDelegate.h"
-#import "ViewController.h"
+#import "AppCoordinator.h"
 
 @interface SceneDelegate ()
+
+@property(strong, nonatomic) AppCoordinator* coordinator;
+
 @end
 
 @implementation SceneDelegate
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    self.window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
     
-    UIViewController* rootViewController = ViewController.new;
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-    
-    [self.window makeKeyAndVisible];
+    UIWindowScene* windowScene = [[UIWindowScene alloc] initWithSession:session connectionOptions:connectionOptions];
+    self.coordinator = [[AppCoordinator alloc] initWithWindowScene:windowScene];
+    [self.coordinator start];
 }
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
