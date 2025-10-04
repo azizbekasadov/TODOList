@@ -10,11 +10,29 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppCoordinator (Coordinator)
+@interface AppCoordinator()
+
+@property (strong, nonatomic) UINavigationController* navigationController;
+@property (strong, nonatomic) UIWindow* window;
+
+@end
+
+@interface AppCoordinator(Coordinator)
+
+@property (strong, nonatomic) UINavigationController* navigationController;
+@property (strong, nonatomic) UIWindow* window;
 
 @end
 
 @implementation AppCoordinator
+
+- (UINavigationController *) navigationController {
+    if (!_navigationController) {
+        _navigationController = [[UINavigationController alloc] init];
+    }
+    
+    return _navigationController;
+}
 
 - (instancetype)initWithWindowScene:(UIWindowScene *)windowScene {
     self = [super init];
@@ -27,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void) start {
-    UIViewController* rootViewController = [[DashboardViewController alloc] init];
+    id rootViewController = [[DashboardViewController alloc] init];
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     self.window.rootViewController = self.navigationController;
