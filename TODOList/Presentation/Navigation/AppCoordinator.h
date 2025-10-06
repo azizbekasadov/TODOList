@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AppCoordinator : NSObject
+@interface AppCoordinator : NSObject <Coordinator>
 
 - (instancetype) initWithWindowScene: (UIWindowScene*) windowScene;
 - (instancetype) init NS_UNAVAILABLE;

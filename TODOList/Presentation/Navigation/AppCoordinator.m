@@ -52,6 +52,19 @@ NS_ASSUME_NONNULL_BEGIN
     [self.window makeKeyAndVisible];
 }
 
+- (void)popFromCurrentController { 
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)popToRootViewController {
+    NSArray *allViewControllers = [self.navigationController.viewControllers copy];
+    [self.navigationController setViewControllers:allViewControllers[0]];
+}
+
+- (void)pushToDestinationController:(UIViewController *)destinationViewController { 
+    [self.navigationController pushViewController:destinationViewController animated:YES];
+}
+
 @end
 
 NS_ASSUME_NONNULL_END

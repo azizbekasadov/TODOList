@@ -23,23 +23,4 @@
     [self.coordinator start];
 }
 
-- (void)sceneDidDisconnect:(UIScene *)scene {
-}
-
-
-- (void)sceneDidBecomeActive:(UIScene *)scene {
-}
-
-
-- (void)sceneWillResignActive:(UIScene *)scene {
-}
-
-
-- (void)sceneWillEnterForeground:(UIScene *)scene {
-}
-
-
-- (void)sceneDidEnterBackground:(UIScene *)scene {
-}
-
 @end
