@@ -65,6 +65,11 @@ NS_ASSUME_NONNULL_BEGIN
     [self.navigationController pushViewController:destinationViewController animated:YES];
 }
 
+- (void)dealloc {
+    _navigationController = nil;
+    _window = nil;
+}
+
 @end
 
 NS_ASSUME_NONNULL_END
